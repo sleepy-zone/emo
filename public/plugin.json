@@ -1,0 +1,14 @@
+{
+	"logo": "logo.png",
+  "main": "index.html",
+	"development": {
+    "main": "http://localhost:5173/"
+	},
+	"features": [
+		{
+		  "code": "emo",
+		  "explain": "使用 emoji 记录心情",
+			"cmds":["emo", "emoji", "心情"]
+		}
+	]
+}
