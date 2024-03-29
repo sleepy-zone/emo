@@ -32,8 +32,8 @@ export default function User () {
         <DrawerTrigger>
         {
           avatar ?
-          <img src={avatar} className="h-10 w-10 rounded-full" /> :
-          <AvatarIcon className="h-10 w-10 text-zinc-700" />
+          <img src={avatar} className="h-[34px] w-[34px] rounded-full" /> :
+          <AvatarIcon className="h-[34px] w-[34px] text-zinc-700" />
         }
         </DrawerTrigger>
         <DrawerContent>
