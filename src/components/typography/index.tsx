@@ -2,20 +2,20 @@ import { useEffect, useRef } from 'react'
 import Typed from 'typed.js'
 import dayjs from 'dayjs'
 
-export function TypedH2() {
+export function TypedH2(props) {
+  const { initTime } = props;
   const el = useRef(null);
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ['告诉我你今天的心情', dayjs().format('YYYY-MM-DD')],
+      strings: ['告诉我你今天的心情', dayjs(initTime).format('YYYY-MM-DD')],
       typeSpeed: 50,
     });
 
     return () => {
-      // Destroy Typed instance during cleanup to stop animation
       typed.destroy();
     };
-  }, []);
+  }, [initTime]);
 
   return (
     <h2
